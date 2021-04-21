@@ -148,7 +148,7 @@ body {
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 2;
-  height: 80%;
+  height: 75%;
 }
 
 .radio-group__date {
