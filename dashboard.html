@@ -8,72 +8,96 @@
     <title>Tasks Dashboard</title>
   </head>
   <body>
-    <button class="nav-button" type="button"></button>
-    <button class="alert-button" type="button"></button>
+    <div class="structure-page">
+      <div class="nav-container">
+        <button class="nav-button" type="button">
+          <img src="./assets/menu.svg" />
+        </button>
+        <h2 class="dash_title">Tasks</h2>
+      </div>
+      <button class="alert-button" type="button">
+        <img src="./assets/bell.svg" />
+      </button>
 
-    <h2 class="form__title">Tasks</h2>
-
-    <!-- <span class="radio-group__title">Tomorrow</span>
+      <section class="checkbox-group">
+        <label>
+          <input
+            type="checkbox"
+            value="tasklist"
+            class="checkbox-group__input"
+            name=""
+            checked
+          />
+          <span>Ich bin ein Platzhalter </span>
         </label>
         <label>
+          <input
+            type="checkbox"
+            value="tasklist"
+            class="checkbox-group__input"
+            name=""
+          />
+          <span>Ich bin ein Platzhalter </span>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            value="tasklist"
+            class="checkbox-group__input"
+            name=""
+          />
+          <span>Ich bin ein Platzhalter</span>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            value="tasklist"
+            class="checkbox-group__input"
+            name=""
+          />
+          <span>Ich bin ein Platzhalter</span>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            value="tasklist"
+            class="checkbox-group__input"
+            name=""
+          />
+          <span>Ich bin ein Platzhalter</span>
+        </label>
+      </section>
+
+      <div class="radio-group__dash">
+        <label class="radio-group__date">
+          <input
+            class="radio-group__input"
+            type="radio"
+            name="date"
+            value="today"
+          />
+          <span>Today</span>
+        </label>
+        <label class="radio-group__date">
+          <input
+            class="radio-group__input"
+            type="radio"
+            name="date"
+            value="tomorrow"
+          />
+          <span>Tomorrow</span>
+        </label>
+        <label class="radio-group__date">
           <input
             class="radio-group__input"
             type="radio"
             name="date"
             value="select-date"
-          /> -->
-    <div>
-      <label>
-        <input type="checkbox" class="checkbox-group__input" name="" checked />
-        <span class="checkbox-group__title">Ich bin ein Platzhalter </span>
-      </label>
-      <label>
-        <input type="checkbox" class="checkbox-group__input" name="" />
-        <span class="checkbox-group__title">Ich bin ein Platzhalter </span>
-      </label>
-
-      <label>
-        <input type="checkbox" class="checkbox-group__input" name="" />
-        <span class="checkbox-group__title">Ich bin ein Platzhalter</span>
-      </label>
-      <label>
-        <input type="checkbox" class="checkbox-group__input" name="" />
-        <span class="checkbox-group__title">Ich bin ein Platzhalter</span>
-      </label>
-      <label>
-        <input type="checkbox" class="checkbox-group__input" name="" />
-        <span class="checkbox-group__title">Ich bin ein Platzhalter</span>
-      </label>
-    </div>
-
-    <div class="radio-group__dash">
-      <label>
-        <input
-          class="radio-group__input"
-          type="radio"
-          name="date"
-          value="today"
-        />
-        <span class="radio-group__title">Today</span>
-      </label>
-      <label>
-        <input
-          class="radio-group__input"
-          type="radio"
-          name="date"
-          value="tomorrow"
-        />
-        <span class="radio-group__title">Tomorrow</span>
-      </label>
-      <label>
-        <input
-          class="radio-group__input"
-          type="radio"
-          name="date"
-          value="select-date"
-        />
-        <span class="radio-group__title">Select Date</span>
-      </label>
+          />
+          <span>Select Date</span>
+        </label>
+      </div>
+      <a href="./new.html"><img src="./assets/plus.svg" /></a>
     </div>
   </body>
 </html>
