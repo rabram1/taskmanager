@@ -8,12 +8,12 @@
     <title>Tasks Dashboard</title>
   </head>
   <body>
-    <div class="structure-page">
+    <main class="structure-page">
       <div class="nav-container">
         <button class="nav-button" type="button">
           <img src="./assets/menu.svg" />
         </button>
-        <h2 class="dash_title">Tasks</h2>
+        <h2 class="dash-title">Tasks</h2>
       </div>
       <button class="alert-button" type="button">
         <img src="./assets/bell.svg" />
@@ -23,52 +23,33 @@
         <label>
           <input
             type="checkbox"
-            value="tasklist"
             class="checkbox-group__input"
             name=""
             checked
           />
-          <span>Ich bin ein Platzhalter </span>
+          <span class="tasks-group__task">Ich bin ein Platzhalter </span>
         </label>
         <label>
-          <input
-            type="checkbox"
-            value="tasklist"
-            class="checkbox-group__input"
-            name=""
-          />
-          <span>Ich bin ein Platzhalter </span>
+          <input type="checkbox" class="checkbox-group__input" name="" />
+          <span class="tasks-group__task">Ich bin ein Platzhalter </span>
         </label>
         <label>
-          <input
-            type="checkbox"
-            value="tasklist"
-            class="checkbox-group__input"
-            name=""
-          />
-          <span>Ich bin ein Platzhalter</span>
+          <input type="checkbox" class="checkbox-group__input" name="" />
+          <span class="tasks-group__task">Ich bin ein Platzhalter</span>
         </label>
         <label>
-          <input
-            type="checkbox"
-            value="tasklist"
-            class="checkbox-group__input"
-            name=""
-          />
-          <span>Ich bin ein Platzhalter</span>
+          <input type="checkbox" class="checkbox-group__input" name="" />
+          <span class="tasks-group__task">Ich bin ein Platzhalter</span>
         </label>
         <label>
-          <input
-            type="checkbox"
-            value="tasklist"
-            class="checkbox-group__input"
-            name=""
-          />
-          <span>Ich bin ein Platzhalter</span>
+          <input type="checkbox" class="checkbox-group__input" name="" />
+          <span class="tasks-group__task">Ich bin ein Platzhalter</span>
         </label>
       </section>
 
-      <div class="radio-group__dash">
+      <!-- RADIO GROUP START  -->
+
+      <section class="radio-group__dash">
         <label class="radio-group__date">
           <input
             class="radio-group__input"
@@ -76,7 +57,7 @@
             name="date"
             value="today"
           />
-          <span>Today</span>
+          <span class="radio-group__title">TODAY</span>
         </label>
         <label class="radio-group__date">
           <input
@@ -85,7 +66,7 @@
             name="date"
             value="tomorrow"
           />
-          <span>Tomorrow</span>
+          <span class="radio-group__title">TOMORROW</span>
         </label>
         <label class="radio-group__date">
           <input
@@ -94,10 +75,12 @@
             name="date"
             value="select-date"
           />
-          <span>Select Date</span>
+          <span class="radio-group__title">THIS WEEK</span>
         </label>
-      </div>
-      <a href="./new.html"><img src="./assets/plus.svg" /></a>
-    </div>
+      </section>
+      <a class="plus-button" href="./new.html"
+        ><img src="./assets/plus.svg"
+      /></a>
+    </main>
   </body>
 </html>
