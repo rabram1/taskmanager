@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tasks Dashboard</title>
+  </head>
+  <body>
+    <main class="structure-page">
+      <div class="nav-container">
+        <button class="nav-button" type="button">
+          <img src="./assets/menu.svg" />
+        </button>
+        <h2 class="dash-title">Tasks</h2>
+      </div>
+      <button class="alert-button" type="button">
+        <img src="./assets/bell.svg" />
+      </button>
+
+      <section class="checkbox-group">
+        <label>
+          <input
+            type="checkbox"
+            class="checkbox-group__input"
+            name=""
+            checked
+          />
+          <span class="tasks-group__task">Ich bin ein Platzhalter </span>
+        </label>
+        <label>
+          <input type="checkbox" class="checkbox-group__input" name="" />
+          <span class="tasks-group__task">Ich bin ein Platzhalter </span>
+        </label>
+        <label>
+          <input type="checkbox" class="checkbox-group__input" name="" />
+          <span class="tasks-group__task">Ich bin ein Platzhalter</span>
+        </label>
+        <label>
+          <input type="checkbox" class="checkbox-group__input" name="" />
+          <span class="tasks-group__task">Ich bin ein Platzhalter</span>
+        </label>
+        <label>
+          <input type="checkbox" class="checkbox-group__input" name="" />
+          <span class="tasks-group__task">Ich bin ein Platzhalter</span>
+        </label>
+      </section>
+
+      <!-- RADIO GROUP START  -->
+
+      <section class="radio-group__dash">
+        <label class="radio-group__date">
+          <input
+            class="radio-group__input"
+            type="radio"
+            name="date"
+            value="today"
+          />
+          <span class="radio-group__title">TODAY</span>
+        </label>
+        <label class="radio-group__date">
+          <input
+            class="radio-group__input"
+            type="radio"
+            name="date"
+            value="tomorrow"
+          />
+          <span class="radio-group__title">TOMORROW</span>
+        </label>
+        <label class="radio-group__date">
+          <input
+            class="radio-group__input"
+            type="radio"
+            name="date"
+            value="select-date"
+          />
+          <span class="radio-group__title">THIS WEEK</span>
+        </label>
+      </section>
+      <a class="plus-button" href="./new.html"
+        ><img src="./assets/plus.svg"
+      /></a>
+    </main>
+  </body>
+</html>
