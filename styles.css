@@ -117,6 +117,7 @@ body {
   margin-left: 1em;
   background: none;
   border: none;
+  /* background-color: red; */
 }
 
 .alert-button {
@@ -189,4 +190,93 @@ body {
   place-items: center;
   margin-left: 6em;
   border-top-left-radius: 1em;
+}
+
+.menu-page {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 4fr 6fr;
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-color);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  color: var(--secondary-text-color);
+}
+
+.nav-button:checked ~ .menu-page {
+  left: 0;
+}
+
+.menu-page__header h4 {
+  text-transform: uppercase;
+  padding-top: 2em;
+  padding-left: 2.5em;
+  margin: 0;
+}
+
+.menu-page__content {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.menu-page__content ul {
+  list-style-type: none;
+  font-size: 2em;
+  display: flex;
+  row-gap: 1em;
+  flex-direction: column;
+}
+
+.menu-page__footer {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.menu-page__footer ul {
+  list-style-type: none;
+  display: flex;
+  row-gap: 2em;
+  flex-direction: column;
+  padding-top: 2em;
+}
+
+.menu-page__header-button {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: start;
+  align-self: end;
+  background-image: url("assets/line.svg");
+  background-image: url("assets/line2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 100px;
+  left: 50px; /* play around with this */
+  position: absolute;
+  top: 90px; /* and play around with this */
+  width: 500px;
+}
+
+/* .menu-page__line {
+  justify-content: ;
+} */
+
+#overlapthis {
+  height: 100px;
+  left: 50px; /* play around with this */
+  position: absolute;
+  top: 90px; /* and play around with this */
+  width: 500px;
+}
+
+#thebigimage {
+  background-image: url("bread_wine.jpg");
+  height: 548px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; /* and this has to be relative */
+  width: 731px;
 }
