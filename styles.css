@@ -28,6 +28,7 @@ body {
   margin: 0;
   height: 100vh;
 }
+
 /* BLOCK */
 .form {
   position: relative;
@@ -117,6 +118,7 @@ body {
   margin-left: 1em;
   background: none;
   border: none;
+  opacity: 0;
   /* background-color: red; */
 }
 
@@ -131,7 +133,7 @@ body {
 .structure-page {
   display: grid;
   height: 100%;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr 1fr;
   grid-template-rows: auto auto 1fr 4em;
 }
 
@@ -181,14 +183,14 @@ body {
 .plus-button {
   grid-row-start: 4;
   grid-row-end: 5;
-  grid-column-start: 2;
+  grid-column-start: 3;
   justify-content: flex-end;
   padding: 2em 3em;
   background: var(--primary-color);
   display: flex;
   align-items: end;
   place-items: center;
-  margin-left: 6em;
+  padding-left: 2em;
   border-top-left-radius: 1em;
 }
 
@@ -204,6 +206,7 @@ body {
   top: 0;
   left: -100%;
   color: var(--secondary-text-color);
+  transition: left 0.5s;
 }
 
 .nav-button:checked ~ .menu-page {
@@ -248,35 +251,5 @@ body {
   grid-column-end: 3;
   justify-self: start;
   align-self: end;
-  background-image: url("assets/line.svg");
-  background-image: url("assets/line2.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  height: 100px;
-  left: 50px; /* play around with this */
-  position: absolute;
-  top: 90px; /* and play around with this */
-  width: 500px;
-}
-
-/* .menu-page__line {
-  justify-content: ;
-} */
-
-#overlapthis {
-  height: 100px;
-  left: 50px; /* play around with this */
-  position: absolute;
-  top: 90px; /* and play around with this */
-  width: 500px;
-}
-
-#thebigimage {
-  background-image: url("bread_wine.jpg");
-  height: 548px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative; /* and this has to be relative */
-  width: 731px;
+  color: white;
 }
