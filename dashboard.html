@@ -10,10 +10,34 @@
   <body>
     <main class="structure-page">
       <div class="nav-container">
-        <button class="nav-button" type="button">
-          <img src="./assets/menu.svg" />
-        </button>
-        <h2 class="dash-title">Tasks</h2>
+        <input id="nav-button" class="nav-button" type="checkbox" />
+        <img src="./assets/menu.svg" />
+
+        <div class="menu-page">
+          <section class="menu-page__header">
+            <h4>Task App</h4>
+          </section>
+          <section class="menu-page__header-button">
+            <a href="dashboard.html"> <img src="./assets/line.svg" /> </a>
+          </section>
+
+          <section class="menu-page__content">
+            <ul>
+              <li>Dashboard</li>
+              <li>Calender</li>
+              <li>Categorize Tasks</li>
+              <li>Setting</li>
+            </ul>
+          </section>
+          <section class="menu-page__footer">
+            <ul>
+              <li>About</li>
+              <li>Privacy Policy</li>
+              <li>License</li>
+            </ul>
+          </section>
+        </div>
+        <div><h2 class="dash-title">Tasks</h2></div>
       </div>
       <button class="alert-button" type="button">
         <img src="./assets/bell.svg" />
