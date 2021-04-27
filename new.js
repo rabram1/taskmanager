@@ -1,12 +1,22 @@
 const formElement = document.querySelector(".form");
-const taskNameInput = document.querySelector(".form__input");
-
-function getTask() {
-  const radioGroupItem = document.querySelector(".radio-group__input:checked");
-  console.log(taskNameInput.value, radioGroupItem.value);
-}
 
 formElement.onsubmit = function (event) {
   event.preventDefault();
-  getTask();
+
+  const textInputElement = document.querySelector(".form__input");
+  const checkedDateInput = document.querySelector(
+    ".radio-group__input:checked"
+  );
+
+  if (!textInputElement.value) {
+    alert("Enter a Task now!");
+    return;
+  }
+
+  if (!checkedDateInput) {
+    alert("Enter a Date now!");
+    return;
+  }
+
+  console.log(textInputElement.value, checkedDateInput.value);
 };
