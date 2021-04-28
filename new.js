@@ -18,5 +18,10 @@ formElement.onsubmit = function (event) {
     return;
   }
 
-  console.log(textInputElement.value, checkedDateInput.value);
+  const taskDateOutput = {
+    name: textInputElement.value,
+    date: checkedDateInput.value,
+  };
+
+  console.log(taskDateOutput);
 };
