@@ -18,10 +18,15 @@ formElement.onsubmit = function (event) {
     return;
   }
 
-  const taskDateOutput = {
+  const task = {
     name: textInputElement.value,
     date: checkedDateInput.value,
   };
 
-  console.log(taskDateOutput);
+  const taskList = JSON.parse(localStorage.getItem("taskList"));
+
+  taskList.push(task);
+  console.log(taskList);
+
+  localStorage.setItem("taskList", JSON.stringify(taskList));
 };
