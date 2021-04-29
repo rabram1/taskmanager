@@ -1,6 +1,22 @@
 const formElement = document.querySelector(".form");
 
+function parseJSONFromLocalStorage(key) {
+  const json = localStorage.getItem(key);
+  const data = JSON.parse(json);
+  return data;
+}
+
+function appendToArray(item, array) {
+  return [...array, item];
+}
+
+function stringifyJSONToLocalStorage(key, value) {
+  const json = JSON.stringify(value);
+  localStorage.setItem(key, json);
+}
+
 formElement.onsubmit = function (event) {
+  // Prevent the default form submit behaivor (sending data to a server an reloading page)
   event.preventDefault();
 
   const textInputElement = document.querySelector(".form__input");
@@ -9,12 +25,12 @@ formElement.onsubmit = function (event) {
   );
 
   if (!textInputElement.value) {
-    alert("Enter a Task now!");
+    alert("Text Input is empty!");
     return;
   }
 
   if (!checkedDateInput) {
-    alert("Enter a Date now!");
+    alert("Radio Button not checked!");
     return;
   }
 
@@ -23,10 +39,7 @@ formElement.onsubmit = function (event) {
     date: checkedDateInput.value,
   };
 
-  const taskList = JSON.parse(localStorage.getItem("taskList"));
-
-  taskList.push(task);
-  console.log(taskList);
-
-  localStorage.setItem("taskList", JSON.stringify(taskList));
+  const taskList = parseJSONFromLocalStorage("taskList");
+  const newTaskList = appendToArray(task, taskList);
+  stringifyJSONToLocalStorage("taskList", newTaskList);
 };
