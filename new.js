@@ -1,7 +1,14 @@
 const formElement = document.querySelector(".form");
 
-function parseJSONFromLocalStorage(key) {
+function goToPage(href) {
+  location.href = href;
+}
+
+function parseJSONFromLocalStorage(key, defaultValue) {
   const json = localStorage.getItem(key);
+  if (json === null) {
+    return defaultValue;
+  }
   const data = JSON.parse(json);
   return data;
 }
@@ -39,7 +46,9 @@ formElement.onsubmit = function (event) {
     date: checkedDateInput.value,
   };
 
-  const taskList = parseJSONFromLocalStorage("taskList");
+  const taskList = parseJSONFromLocalStorage("taskList", []);
   const newTaskList = appendToArray(task, taskList);
   stringifyJSONToLocalStorage("taskList", newTaskList);
+
+  goToPage("/dashboard.html");
 };
