@@ -76,7 +76,6 @@ body {
 }
 
 /* BLOCK */
-
 .radio-group {
   display: flex;
   justify-content: space-around;
@@ -137,7 +136,7 @@ body {
   grid-template-rows: auto auto 1fr 4em;
 }
 
-.checkbox-item {
+.checkboxSection {
   grid-column: 2/4;
   display: grid;
   padding: 3em 1em;
