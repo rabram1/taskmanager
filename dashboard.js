@@ -1,30 +1,30 @@
-// Wählt die input-Elemente aller radiobuttons
+// chooses the input elements of all radiobuttons
 const dateInputs = document.querySelectorAll(".radio-group__input");
-// Für jeden Eintrag in dieser Liste wird eine Aktion ausgeführt
+// for every input in the array an action will be processed
 dateInputs.forEach((dateInput) => {
   dateInput.onchange = () => filterAndAppendDate(dateInput.value);
 });
 
 function createTaskElement(task) {
-  //Create Elements for HTML
+  //Create label/input/span Elements for HTML
   const label = document.createElement("label");
   const input = document.createElement("input");
   const span = document.createElement("span");
-  //fills Element with attributes
+  //fills elements with attributes
   input.type = "checkbox";
   input.className = "checkbox-item";
   input.checked = task.completed;
   input.id = task.name;
   span.className = "tasks-group__task";
   span.innerText = task.name;
-  //define input and span as child of the parent label
+  //defines input and span as child of the parent label, returns parent.
   label.append(input, span);
   return label;
 }
 // get values of the key "taskList" from the browser-storage and convert/parse this value to an object
 function parseJSONFromLocalStorage(key, defaultValue) {
   const json = localStorage.getItem(key);
-  // if no tasks in array set defaultValue
+  // if the array is empty, return defaultValue
   if (json === null) {
     return defaultValue;
   }
