@@ -45,6 +45,7 @@ formElement.onsubmit = function (event) {
     name: textInputElement.value,
     date: checkedDateInput.value,
     completed: false,
+    id: Date.now().toString(),
   };
 
   const taskList = parseJSONFromLocalStorage("taskList", []);

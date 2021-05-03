@@ -14,7 +14,8 @@ function createTaskElement(task) {
   input.type = "checkbox";
   input.className = "checkbox-item";
   input.checked = task.completed;
-  input.id = task.name;
+  // input.id = task.name;
+  input.name = task.id;
   span.className = "tasks-group__task";
   span.innerText = task.name;
   //defines input and span as child of the parent label, returns parent.
@@ -39,12 +40,12 @@ function stringifyJSONToLocalStorage(key, value) {
 }
 /////////////////////////////////////////////////
 /// NEW FUNC
-function filterAndAppendDate(TaskDate) {
-  console.log("Filter Datum", TaskDate);
+function filterAndAppendDate(taskDate) {
+  // console.log("Filter Datum", taskDate);
   const taskList = parseJSONFromLocalStorage("taskList", []);
-  console.log("Vom Storage", taskList);
-  const tasksDate = taskList.filter((task) => task.date === TaskDate);
-  console.log("nach Filterung", tasksDate);
+  // console.log("Vom Storage", taskList);
+  const tasksDate = taskList.filter((task) => task.date === taskDate);
+  // console.log("nach Filterung", tasksDate);
   const taskElements = tasksDate.map(function (task) {
     return createTaskElement(task);
   });
@@ -59,17 +60,17 @@ function applyOnClickToCheckboxes() {
   const radioInputs = document.querySelectorAll(".checkbox-item");
   radioInputs.forEach((checkboxInput) => {
     checkboxInput.onclick = () =>
-      filterAndApplyToLocalStorage(checkboxInput.id);
+      filterAndApplyToLocalStorage(checkboxInput.name);
   });
 }
 
 //checks if items are completed or not (gets task from Storage)
-function filterAndApplyToLocalStorage(id) {
+function filterAndApplyToLocalStorage(name) {
   const list = parseJSONFromLocalStorage("taskList", []);
   list.forEach((task) => {
     // console.log(task);
     // console.log(inputElement.id);
-    if (task.name === id) {
+    if (task.id === name) {
       task.completed = !task.completed;
     }
   });
